@@ -1,0 +1,40 @@
+{
+  "name": "opencode-playwright-test-agents",
+  "version": "0.1.0",
+  "description": "OpenCode plugin providing Playwright MCP test agents (verify & generate)",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target node --format esm",
+    "dev": "bun build src/index.ts --outdir dist --target node --format esm --watch"
+  },
+  "keywords": [
+    "opencode",
+    "playwright",
+    "mcp",
+    "testing",
+    "e2e",
+    "agents"
+  ],
+  "author": "svtter",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/svtter/opencode-playwright-test-agents.git"
+  },
+  "files": [
+    "dist",
+    "src/templates"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.0.0"
+  },
+  "peerDependencies": {
+    "@opencode-ai/plugin": "*"
+  },
+  "peerDependenciesMeta": {
+    "@opencode-ai/plugin": {
+      "optional": true
+    }
+  }
+}
