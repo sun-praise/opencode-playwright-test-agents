@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "build": "bun build src/index.ts --outdir dist --target node --format esm",
-    "dev": "bun build src/index.ts --outdir dist --target node --format esm --watch"
+    "build": "esbuild src/index.ts --outdir=dist --bundle --platform=node --format=esm --target=node18",
+    "dev": "esbuild src/index.ts --outdir=dist --bundle --platform=node --format=esm --target=node18 --watch"
   },
   "keywords": [
     "opencode",
@@ -27,7 +27,8 @@
     "src/templates"
   ],
   "devDependencies": {
-    "@types/node": "^22.0.0"
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.28.0"
   },
   "peerDependencies": {
     "@opencode-ai/plugin": "*"
